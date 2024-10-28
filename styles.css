@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+/*###############################################
+########### PROJECT CODE STARTS ################# */
+:root {
+    /* Primary */
+    --orange: hsl(25, 97%, 53%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body{
+    background-color: var(--very-dark-blue);
+    font-size: 15px;
+    font-family: 'Overpass', Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-wrapper{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    width: 90%;
+    max-width: 430px;
+    border-radius: 2rem;
+}
+
+.logo-box{
+    background-color: hsl(213, 10%, 22%);
+    padding: .8rem;
+    border-radius: 50%;
+    width: 40px;
+
+    margin-bottom: .7rem;
+}
+
+.thanks-img-wrapper{
+    margin: 0 auto;
+    display: none;
+}
+
+.rating-result-wrapper{
+    background-color: hsl(213, 10%, 22%);
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+    padding: .5rem;
+    border-radius: 2rem;
+    display: none;
+}
+
+.rating-result-txt{
+    color: var(--orange);
+}
+
+.title-txt{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.desc-txt{
+    color: var(--light-grey);
+}
+
+.ratings-box{
+    margin: .5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ratings-box .btn{
+    background-color: hsl(213, 10%, 22%);
+    border: none;
+    color: var(--light-grey);
+    text-align: center;
+    border-radius: 100%;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    width: 40px; /* Or any equal width and height */
+    height: 40px;
+}
+
+.btn.selected-btn{
+    background-color: var(--white);
+    color: var(--very-dark-blue);
+}  
+
+.btn.selected-btn:hover{
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+}
+
+.ratings-box button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: var(--orange);
+    color: var(--very-dark-blue);
+}
+
+.submit-box button{
+    background-color: var(--orange);
+    color: var(--very-dark-blue);
+    border: none;
+    padding: .7rem 1rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+.submit-box button:hover{
+    cursor: pointer;
+    background-color: var(--white);
+    transform: scale(1.03);
+}
+
+#error{
+  color: red;
+  text-align: center;
+  padding-top: 1rem;
+  display: none;
+}
+
+@media (min-width: 500px){
+  .thanks-img-wrapper{
+    margin-top: 1rem;
+  }
+}
+
+
+
+
